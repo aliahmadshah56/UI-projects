@@ -1,8 +1,10 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:food_app/Widgets/AppBarWidget.dart';
 
+import 'package:food_app/Widgets/AppBarWidget.dart';
+import '../Widgets/CategoriesWidget.dart';
 class Homepage extends StatelessWidget {
+  const Homepage({super.key});
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -55,10 +57,21 @@ class Homepage extends StatelessWidget {
                 ),
               ),
             ),
+          ),
+
+
+
+          // category
+
+          Padding(padding: EdgeInsets.only(top:15, left: 10),
+          child: Text("Categories",
+          style: TextStyle(
+            fontWeight: FontWeight.bold,
+            fontSize: 20
           )
-
-
-
+          )
+            ,),
+          Categorieswidget(),
         ],
       ),
     );
