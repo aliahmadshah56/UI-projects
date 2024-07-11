@@ -2,18 +2,21 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 import 'package:food_app/Widgets/AppBarWidget.dart';
+import 'package:food_app/Widgets/PopularItemWidget.dart';
 import '../Widgets/CategoriesWidget.dart';
+
 class Homepage extends StatelessWidget {
   const Homepage({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       body: ListView(
         children: [
-          //Customized AppBar
+//Customized AppBar
           Appbarwidget(),
 
-          //Search
+//Search
 
           Padding(
             padding: EdgeInsets.symmetric(vertical: 10, horizontal: 15),
@@ -34,7 +37,8 @@ class Homepage extends StatelessWidget {
                 padding: EdgeInsets.symmetric(horizontal: 10),
                 child: Row(
                   children: [
-                    Icon(CupertinoIcons.search,
+                    Icon(
+                      CupertinoIcons.search,
                       color: Colors.grey,
                     ),
                     Container(
@@ -46,9 +50,8 @@ class Homepage extends StatelessWidget {
                         ),
                         child: TextField(
                           decoration: InputDecoration(
-                            hintText: 'What would you like?',
-                            border: InputBorder.none
-                          ),
+                              hintText: 'What would you like?',
+                              border: InputBorder.none),
                         ),
                       ),
                     ),
@@ -59,19 +62,23 @@ class Homepage extends StatelessWidget {
             ),
           ),
 
+// category
 
-
-          // category
-
-          Padding(padding: EdgeInsets.only(top:15, left: 10),
-          child: Text("Categories",
-          style: TextStyle(
-            fontWeight: FontWeight.bold,
-            fontSize: 20
-          )
-          )
-            ,),
+          Padding(
+            padding: EdgeInsets.only(top: 15, left: 10),
+            child: Text("Categories",
+                style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20)),
+          ),
           Categorieswidget(),
+
+//Popular Item
+
+          Padding(
+            padding: EdgeInsets.only(top: 15, left: 10),
+            child: Text("Popular",
+                style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20)),
+          ),
+          Popularitemwidget(),
         ],
       ),
     );
