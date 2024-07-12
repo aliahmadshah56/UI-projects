@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:food_app/Widgets/AppBarWidget.dart';
 import 'package:food_app/Widgets/PopularItemWidget.dart';
 import '../Widgets/CategoriesWidget.dart';
+import '../Widgets/NewestItem.dart';
 
 class Homepage extends StatelessWidget {
   const Homepage({super.key});
@@ -79,6 +80,15 @@ class Homepage extends StatelessWidget {
                 style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20)),
           ),
           Popularitemwidget(),
+
+//Newest Item
+
+          Padding(
+            padding: EdgeInsets.only(top: 15, left: 10),
+            child: Text("Newest Item",
+                style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20)),
+          ),
+          Newestitem(),
         ],
       ),
     );
