@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:food_app/Widgets/CartPage.dart';
 import 'package:food_app/pages/HomePage.dart';
 
 void main() {
@@ -13,7 +14,10 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: "FOOD APP",
-      routes: {"/": (context) => Homepage()},
+      routes: {
+      "/": (context) => Homepage(),
+      "cartPage":(context)=>Cartpage(),
+      },
     );
   }
 }
