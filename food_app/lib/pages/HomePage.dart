@@ -5,6 +5,7 @@ import 'package:food_app/Widgets/AppBarWidget.dart';
 import 'package:food_app/Widgets/PopularItemWidget.dart';
 import '../Widgets/CategoriesWidget.dart';
 import '../Widgets/NewestItem.dart';
+import '../Widgets/DrawerWidget.dart';
 
 class Homepage extends StatelessWidget {
   const Homepage({super.key});
@@ -91,6 +92,30 @@ class Homepage extends StatelessWidget {
           Newestitem(),
         ],
       ),
+      
+//Drawer
+    drawer: Drawerwidget(),
+    floatingActionButton: Container(
+      decoration: BoxDecoration(
+        borderRadius: BorderRadius.circular(20),
+        boxShadow: [BoxShadow(
+            color: Colors.white,
+          spreadRadius: 2,
+          blurRadius: 10,
+
+        )]
+      ),
+        child :FloatingActionButton(
+          onPressed: () {},
+          child: Icon(
+            CupertinoIcons.cart,
+            size: 28,
+              color: Colors.red,
+          ),
+          backgroundColor: Colors.white,
+          
+        )
+    ),
     );
   }
 }
