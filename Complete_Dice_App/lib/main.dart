@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import 'clickabledice.dart';
+import 'roll.dart';
 
 void main() => runApp(DiceApp());
 

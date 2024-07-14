@@ -104,12 +104,12 @@ class _DiceState extends State<Dice> {
             ),
             Expanded(
                 child: Text(
-              'Total =$sum2 , clicks =$c2',
-              style: TextStyle(
-                  color: Colors.black,
-                  fontSize: 20,
-                  fontWeight: FontWeight.bold),
-            )),
+                  'Total =$sum2 , clicks =$c2',
+                  style: TextStyle(
+                      color: Colors.black,
+                      fontSize: 20,
+                      fontWeight: FontWeight.bold),
+                )),
           ],
         ),
         SizedBox(height: 30),
@@ -148,20 +148,20 @@ class _DiceState extends State<Dice> {
           children: [
             Expanded(
                 child: Text(
-              'Total =$sum3 , clicks =$c3',
-              style: TextStyle(
-                  color: Colors.black,
-                  fontSize: 20,
-                  fontWeight: FontWeight.bold),
-            )),
+                  'Total =$sum3 , clicks =$c3',
+                  style: TextStyle(
+                      color: Colors.black,
+                      fontSize: 20,
+                      fontWeight: FontWeight.bold),
+                )),
             Expanded(
                 child: Text(
-              'Total =$sum4 , clicks =$c4',
-              style: TextStyle(
-                  color: Colors.black,
-                  fontSize: 20,
-                  fontWeight: FontWeight.bold),
-            )),
+                  'Total =$sum4 , clicks =$c4',
+                  style: TextStyle(
+                      color: Colors.black,
+                      fontSize: 20,
+                      fontWeight: FontWeight.bold),
+                )),
           ],
         ),
       ],
