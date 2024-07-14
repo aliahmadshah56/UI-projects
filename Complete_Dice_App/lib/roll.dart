@@ -13,6 +13,8 @@ class _DiceState extends State<Dice> {
   int diceNumber4 = 1;
   int sum1 = 0, sum2 = 0, sum3 = 0, sum4 = 0;
   int c1 = 0, c2 = 0, c3 = 0, c4 = 0;
+  int win=0;
+  int a=0;
 
   void rollDice1() {
     setState(() {
@@ -20,7 +22,11 @@ class _DiceState extends State<Dice> {
         diceNumber1 = Random().nextInt(6) + 1;
         sum1 += diceNumber1;
         c1++;
+        if(c1==10&&c2==10&&c3==10&&c4==10) {
+          showResultDialog();
+        }
       }
+
     });
   }
 
@@ -30,6 +36,9 @@ class _DiceState extends State<Dice> {
         diceNumber2 = Random().nextInt(6) + 1;
         sum2 += diceNumber2;
         c2++;
+        if(c1==10&&c2==10&&c3==10&&c4==10) {
+          showResultDialog();
+        }
       }
     });
   }
@@ -40,6 +49,9 @@ class _DiceState extends State<Dice> {
         diceNumber3 = Random().nextInt(6) + 1;
         sum3 += diceNumber3;
         c3++;
+        if(c1==10&&c2==10&&c3==10&&c4==10) {
+          showResultDialog();
+        }
       }
     });
   }
@@ -50,7 +62,11 @@ class _DiceState extends State<Dice> {
         diceNumber4 = Random().nextInt(6) + 1;
         sum4 += diceNumber4;
         c4++;
+        if(c1==10&&c2==10&&c3==10&&c4==10) {
+          showResultDialog();
+        }
       }
+
     });
   }
 
@@ -65,6 +81,54 @@ class _DiceState extends State<Dice> {
       sum3 = 0;
       sum4 = 0;
     });
+  }
+
+  void showResultDialog() {
+    showDialog(
+      context: context,
+      builder: (BuildContext context) {
+        win=Winner();
+        return AlertDialog(
+          title: Text('Results'),
+          content: SingleChildScrollView(
+            child: ListBody(
+              children: <Widget>[
+                  Text('Player $a is the Winner.'),
+                  SizedBox(height: 7,),
+                  Text('Total Score = $win'),
+                SizedBox(height: 10,),
+              ],
+            ),
+          ),
+          actions: <Widget>[
+            TextButton(
+              child: Text('Close'),
+              onPressed: () {
+                Navigator.of(context).pop();
+              },
+            ),
+          ],
+        );
+      },
+    );
+  }
+
+  int Winner() {
+    if (sum1 > sum2 && sum1 > sum3 && sum1 > sum4) {
+      a=1;
+      return sum1;
+    } else if (sum2 > sum1 && sum2 > sum3 && sum2 > sum4) {
+      a=2;
+      return sum2;
+    }
+    else if (sum3 > sum1 && sum3 > sum2 && sum3 > sum4) {
+      a=3;
+      return sum3;
+    }
+    else {
+      a=4;
+      return sum4;
+    }
   }
 
   @override
