@@ -38,20 +38,20 @@ class Newestitem extends StatelessWidget {
                     ),
                     SizedBox(width: 10,),
                     Container(
-                      width: 190,
+                      width: 170,
                       child: Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                         children: [
                           Text('Cheeze Pizza',
                             style: TextStyle(
-                            fontSize: 22,
+                            fontSize: 20,
                             fontWeight: FontWeight.bold,
                           ),
                           ),
                           Text('Taste Our Cheeze Pizza,We provide Our Great Foods',
                             style: TextStyle(
-                            fontSize: 14,
+                            fontSize: 17,
                           ),
                           ),
 
@@ -85,10 +85,10 @@ class Newestitem extends StatelessWidget {
                           children: [
 
                             Icon(Icons.favorite,color: Colors.red,
-                              size: 23,),
+                              size: 20,),
                             Icon(CupertinoIcons.cart,
                               color: Colors.red,
-                              size: 23,)
+                              size: 20,)
                           ],
                         ))
                   ],
@@ -122,20 +122,20 @@ class Newestitem extends StatelessWidget {
                     ),
                     SizedBox(width: 10,),
                     Container(
-                      width: 190,
+                      width: 170,
                       child: Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                         children: [
                           Text('Spicy Biryani',
                             style: TextStyle(
-                              fontSize: 22,
+                              fontSize: 20,
                               fontWeight: FontWeight.bold,
                             ),
                           ),
                           Text('Taste Our Chilli and Hot Spicy Biryani ',
                             style: TextStyle(
-                              fontSize: 14,
+                              fontSize: 17,
                             ),
                           ),
 
@@ -169,10 +169,10 @@ class Newestitem extends StatelessWidget {
                           children: [
 
                             Icon(Icons.favorite_border,color: Colors.red,
-                              size: 23,),
+                              size: 20,),
                             Icon(CupertinoIcons.cart,
                               color: Colors.red,
-                              size: 23,)
+                              size: 20,)
                           ],
                         ))
                   ],
@@ -206,20 +206,20 @@ class Newestitem extends StatelessWidget {
                     ),
                     SizedBox(width: 10,),
                     Container(
-                      width: 190,
+                      width: 170,
                       child: Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                         children: [
                           Text('Hot Dogs',
                             style: TextStyle(
-                              fontSize: 22,
+                              fontSize: 20,
                               fontWeight: FontWeight.bold,
                             ),
                           ),
                           Text('Taste Our delicious Hot Dogs',
                             style: TextStyle(
-                              fontSize: 14,
+                              fontSize: 17,
                             ),
                           ),
 
@@ -253,10 +253,10 @@ class Newestitem extends StatelessWidget {
                           children: [
 
                             Icon(Icons.favorite_border,color: Colors.red,
-                              size: 23,),
+                              size: 20,),
                             Icon(CupertinoIcons.cart,
                               color: Colors.red,
-                              size: 23,)
+                              size: 20,)
                           ],
                         ))
                   ],

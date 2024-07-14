@@ -30,7 +30,7 @@ class Categorieswidget extends StatelessWidget {
                   ]
                 ),
 
-                 child: Image.asset('images/drink.png',
+                 child: Image.asset('images/Drink.png',
                  width: 70,
                      height: 70,
                  ),

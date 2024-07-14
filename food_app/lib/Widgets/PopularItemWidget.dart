@@ -43,7 +43,7 @@ class Popularitemwidget extends StatelessWidget {
                       Text(
                         'Hot Burger',
                         style: TextStyle(
-                            fontSize: 12, fontWeight: FontWeight.bold),
+                            fontSize: 18, fontWeight: FontWeight.bold),
                       ),
                       SizedBox(
                         height: 4,
@@ -51,7 +51,7 @@ class Popularitemwidget extends StatelessWidget {
                       Text(
                         'Our delicious burger',
                         style: TextStyle(
-                          fontSize: 13,
+                          fontSize: 15,
                         ),
                       ),
                       SizedBox(height: 12),
@@ -61,14 +61,14 @@ class Popularitemwidget extends StatelessWidget {
                           Text(
                             '\$10',
                             style: TextStyle(
-                                fontSize: 17,
+                                fontSize: 18,
                                 color: Colors.red,
                                 fontWeight: FontWeight.bold),
                           ),
                           Icon(
                             Icons.favorite_border,
                             color: Colors.red,
-                            size: 26,
+                            size: 18,
                           )
                         ],
                       )
@@ -109,15 +109,15 @@ class Popularitemwidget extends StatelessWidget {
                       Text(
                         'Cheeze Pizza',
                         style: TextStyle(
-                            fontSize: 12, fontWeight: FontWeight.bold),
+                            fontSize: 18, fontWeight: FontWeight.bold),
                       ),
                       SizedBox(
                         height: 4,
                       ),
                       Text(
-                        'Our Pleasant Tasting Pizza',
+                        'Our Pleasant Pizza',
                         style: TextStyle(
-                          fontSize: 12,
+                          fontSize: 15,
                         ),
                       ),
                       SizedBox(height: 12),
@@ -127,7 +127,7 @@ class Popularitemwidget extends StatelessWidget {
                           Text(
                             '\$17',
                             style: TextStyle(
-                                fontSize: 17,
+                                fontSize: 18,
                                 color: Colors.red,
                                 fontWeight: FontWeight.bold),
                           ),
@@ -175,7 +175,7 @@ class Popularitemwidget extends StatelessWidget {
                       Text(
                         'Special Baryani',
                         style: TextStyle(
-                            fontSize: 12, fontWeight: FontWeight.bold),
+                            fontSize: 18, fontWeight: FontWeight.bold),
                       ),
                       SizedBox(
                         height: 4,
@@ -183,7 +183,7 @@ class Popularitemwidget extends StatelessWidget {
                       Text(
                         'Our Spicy Biryani',
                         style: TextStyle(
-                          fontSize: 13,
+                          fontSize: 15,
                         ),
                       ),
                       SizedBox(height: 12),
@@ -193,14 +193,14 @@ class Popularitemwidget extends StatelessWidget {
                           Text(
                             '\$8.45',
                             style: TextStyle(
-                                fontSize: 17,
+                                fontSize: 18,
                                 color: Colors.red,
                                 fontWeight: FontWeight.bold),
                           ),
                           Icon(
                             Icons.favorite_border,
                             color: Colors.red,
-                            size: 26,
+                            size: 18,
                           )
                         ],
                       )

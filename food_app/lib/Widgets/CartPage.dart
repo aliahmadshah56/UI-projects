@@ -21,7 +21,7 @@ class Cartpage extends StatelessWidget {
                     child: Text(
                       'Order List',
                       style:
-                          TextStyle(fontSize: 30, fontWeight: FontWeight.bold),
+                          TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
                     ),
                   ),
                   Padding(
@@ -64,7 +64,7 @@ class Cartpage extends StatelessWidget {
                                 Text(
                                   'Taste Our Hot Pizza',
                                   style: TextStyle(
-                                      fontSize: 15,
+                                      fontSize: 17,
                                       ),
                                 ),
                                 Text(

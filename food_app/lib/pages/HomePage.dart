@@ -45,7 +45,7 @@ class Homepage extends StatelessWidget {
                     ),
                     Container(
                       height: 50,
-                      width: 350,
+                      width: 310,
                       child: Padding(
                         padding: EdgeInsets.symmetric(
                           horizontal: 15,
@@ -57,7 +57,9 @@ class Homepage extends StatelessWidget {
                         ),
                       ),
                     ),
-                    Icon(Icons.filter)
+                    Icon(
+                        Icons.filter
+                    )
                   ],
                 ),
               ),

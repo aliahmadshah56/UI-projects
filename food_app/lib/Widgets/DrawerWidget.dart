@@ -15,11 +15,11 @@ class Drawerwidget extends StatelessWidget {
                 decoration: BoxDecoration(color: Colors.grey),
                 accountName: Text(
                   'Ali Ahmad Shah',
-                  style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
+                  style: TextStyle(fontSize: 17, fontWeight: FontWeight.bold),
                 ),
                 accountEmail: Text(
                   'www.a7726867@gmail.com',
-                  style: TextStyle(fontSize: 10),
+                  style: TextStyle(fontSize: 17),
                 ),
                 currentAccountPicture: CircleAvatar(
                   backgroundImage: AssetImage('images/image.png'),
