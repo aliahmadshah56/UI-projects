@@ -3,10 +3,10 @@ import 'dart:math';
 
 class Dice extends StatefulWidget {
   @override
-  _DiceState createState() => _DiceState();
+  DiceState createState() => DiceState();
 }
 
-class _DiceState extends State<Dice> {
+class DiceState extends State<Dice> {
   int diceNumber1 = 1;
   int diceNumber2 = 1;
   int diceNumber3 = 1;
@@ -256,6 +256,7 @@ class _DiceState extends State<Dice> {
           ],
         ),
         SizedBox(height: 30),
+
         Padding(
             padding: EdgeInsets.symmetric(
               vertical: 30.0,
