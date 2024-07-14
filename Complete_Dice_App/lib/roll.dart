@@ -54,6 +54,19 @@ class _DiceState extends State<Dice> {
     });
   }
 
+  void reset() {
+    setState(() {
+      c1 = 0;
+      c2 = 0;
+      c3 = 0;
+      c4 = 0;
+      sum1 = 0;
+      sum2 = 0;
+      sum3 = 0;
+      sum4 = 0;
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
     return Column(
@@ -89,10 +102,15 @@ class _DiceState extends State<Dice> {
             ),
           ],
         ),
-        SizedBox(height: 30),
+        SizedBox(
+          height: 30,
+        ),
         Row(
           // mainAxisAlignment: MainAxisAlignment.center,
           children: [
+            SizedBox(
+              width: 20,
+            ),
             Expanded(
               child: Text(
                 'Total =$sum1 , clicks =$c1',
@@ -102,14 +120,17 @@ class _DiceState extends State<Dice> {
                     fontWeight: FontWeight.bold),
               ),
             ),
+            SizedBox(
+              width: 20,
+            ),
             Expanded(
                 child: Text(
-                  'Total =$sum2 , clicks =$c2',
-                  style: TextStyle(
-                      color: Colors.black,
-                      fontSize: 20,
-                      fontWeight: FontWeight.bold),
-                )),
+              'Total =$sum2 , clicks =$c2',
+              style: TextStyle(
+                  color: Colors.black,
+                  fontSize: 20,
+                  fontWeight: FontWeight.bold),
+            )),
           ],
         ),
         SizedBox(height: 30),
@@ -146,24 +167,67 @@ class _DiceState extends State<Dice> {
         Row(
           // mainAxisAlignment: MainAxisAlignment.center,
           children: [
+            SizedBox(
+              width: 20,
+            ),
             Expanded(
                 child: Text(
-                  'Total =$sum3 , clicks =$c3',
-                  style: TextStyle(
-                      color: Colors.black,
-                      fontSize: 20,
-                      fontWeight: FontWeight.bold),
-                )),
+              'Total =$sum3 , clicks =$c3',
+              style: TextStyle(
+                  color: Colors.black,
+                  fontSize: 20,
+                  fontWeight: FontWeight.bold),
+            )),
+            SizedBox(
+              width: 20,
+            ),
             Expanded(
                 child: Text(
-                  'Total =$sum4 , clicks =$c4',
-                  style: TextStyle(
-                      color: Colors.black,
-                      fontSize: 20,
-                      fontWeight: FontWeight.bold),
-                )),
+              'Total =$sum4 , clicks =$c4',
+              style: TextStyle(
+                  color: Colors.black,
+                  fontSize: 20,
+                  fontWeight: FontWeight.bold),
+            )),
           ],
         ),
+        SizedBox(height: 30),
+        Padding(
+            padding: EdgeInsets.symmetric(
+              vertical: 30.0,
+              horizontal: 20.0,
+            ),
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              crossAxisAlignment: CrossAxisAlignment.center,
+              children: [
+                InkWell(
+                  onTap: () {
+                    reset();
+                  },
+                  child: Container(
+                    padding: EdgeInsets.all(8.0),
+                    decoration: BoxDecoration(
+                        color: Colors.white,
+                        borderRadius: BorderRadius.circular(20.0),
+                        boxShadow: [
+                          BoxShadow(
+                            color: Colors.grey.withOpacity(0.5),
+                            spreadRadius: 2.0,
+                            blurRadius: 10.0,
+                          )
+                        ]),
+                    child: Text(
+                      'Reset',
+                      style: TextStyle(
+                          fontSize: 20,
+                          fontWeight: FontWeight.bold,
+                          color: Colors.black),
+                    ),
+                  ),
+                ),
+              ],
+            ))
       ],
     );
   }
