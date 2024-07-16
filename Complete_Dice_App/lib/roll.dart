@@ -14,15 +14,15 @@ class DiceState extends State<Dice> {
   int sum1 = 0, sum2 = 0, sum3 = 0, sum4 = 0;
   int c1 = 0, c2 = 0, c3 = 0, c4 = 0;
   int win=0;
-  int a=0;
+  int a=0;int count=0;
 
   void rollDice1() {
     setState(() {
-      if (c1 < 10) {
+      if (c1 < count) {
         diceNumber1 = Random().nextInt(6) + 1;
         sum1 += diceNumber1;
         c1++;
-        if(c1==10&&c2==10&&c3==10&&c4==10) {
+        if(c1==count&&c2==count&&c3==count&&c4==count) {
           showResultDialog();
         }
       }
@@ -32,11 +32,11 @@ class DiceState extends State<Dice> {
 
   void rollDice2() {
     setState(() {
-      if (c2 < 10) {
+      if (c2 < count) {
         diceNumber2 = Random().nextInt(6) + 1;
         sum2 += diceNumber2;
         c2++;
-        if(c1==10&&c2==10&&c3==10&&c4==10) {
+        if(c1==count&&c2==count&&c3==count&&c4==count) {
           showResultDialog();
         }
       }
@@ -45,11 +45,11 @@ class DiceState extends State<Dice> {
 
   void rollDice3() {
     setState(() {
-      if (c3 < 10) {
+      if (c3 < count) {
         diceNumber3 = Random().nextInt(6) + 1;
         sum3 += diceNumber3;
         c3++;
-        if(c1==10&&c2==10&&c3==10&&c4==10) {
+        if(c1==count&&c2==count&&c3==count&&c4==count) {
           showResultDialog();
         }
       }
@@ -58,11 +58,11 @@ class DiceState extends State<Dice> {
 
   void rollDice4() {
     setState(() {
-      if (c4 < 10) {
+      if (c4 < count) {
         diceNumber4 = Random().nextInt(6) + 1;
         sum4 += diceNumber4;
         c4++;
-        if(c1==10&&c2==10&&c3==10&&c4==10) {
+        if(c1==count&&c2==count&&c3==count&&c4==count) {
           showResultDialog();
         }
       }
@@ -131,11 +131,34 @@ class DiceState extends State<Dice> {
     }
   }
 
+  void counter(){
+    setState(() {
+      count ++;
+    });
+  }
   @override
   Widget build(BuildContext context) {
     return Column(
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
+        SizedBox(height: 20),
+        Row(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Expanded(
+              child: GestureDetector(
+                onTap: () {
+                 counter();
+                },
+                child: Text('Clicks $count',
+                style: TextStyle(
+                  fontSize: 20,
+                  fontWeight: FontWeight.bold
+                ))
+              ),
+            ),
+          ],
+        ),
         SizedBox(height: 20),
         Row(
           mainAxisAlignment: MainAxisAlignment.center,
