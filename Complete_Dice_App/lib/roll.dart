@@ -136,6 +136,12 @@ class DiceState extends State<Dice> {
       count ++;
     });
   }
+
+  void dec(){
+    setState(() {
+      count --;
+    });
+  }
   @override
   Widget build(BuildContext context) {
     return Column(
@@ -150,11 +156,30 @@ class DiceState extends State<Dice> {
                 onTap: () {
                  counter();
                 },
-                child: Text('Clicks $count',
+                child: Text('Clicks + $count ',
                 style: TextStyle(
                   fontSize: 20,
                   fontWeight: FontWeight.bold
                 ))
+              ),
+            ),
+          ],
+        ),
+        SizedBox(width:20),
+
+        Row(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Expanded(
+              child: GestureDetector(
+                  onTap: () {
+                    dec();
+                  },
+                  child: Text('-',
+                      style: TextStyle(
+                          fontSize: 20,
+                          fontWeight: FontWeight.bold
+                      ))
               ),
             ),
           ],
